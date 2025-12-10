@@ -1,0 +1,145 @@
+/* Background gradient for overall page */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #3a060c, #7a0a19);
+    overflow: hidden;
+}
+
+/* Wrapper for centering */
+.wrapper {
+    width: 100%;
+    padding: 20px;
+}
+
+/* Glassmorphism container */
+.todo-container {
+    max-width: 420px;
+    margin: 0 auto;
+    padding: 25px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.15); /* semi-transparent */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    animation: fadeIn 0.6s ease;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Title */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffccd5; /* soft red text */
+    letter-spacing: 1px;
+}
+
+/* Input group */
+.input-group {
+    display: flex;
+    gap: 12px;
+}
+
+.input-group input {
+    flex: 1;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    background: rgba(255, 255, 255, 0.25);
+    color: #fff;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    transition: 0.2s ease;
+}
+
+.input-group input::placeholder {
+    color: #ffe4e4;
+}
+
+.input-group input:focus {
+    background: rgba(255, 255, 255, 0.35);
+}
+
+/* Add button */
+.input-group button {
+    width: 48px;
+    border: none;
+    border-radius: 12px;
+    background: #b31224;
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.input-group button:hover {
+    background: #ff1e3c;
+}
+
+/* Task list */
+#taskList {
+    margin-top: 25px;
+    padding: 0;
+    list-style: none;
+}
+
+/* Individual task */
+.task {
+    background: rgba(255, 255, 255, 0.15);
+    border-left: 5px solid #ff1e3c;
+    padding: 12px 14px;
+    margin-bottom: 12px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    color: #fff;
+}
+
+.task span {
+    font-size: 15px;
+}
+
+/* Task buttons */
+.task-buttons button {
+    margin-left: 6px;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.task-buttons button:nth-child(1) { /* Edit */
+    background: rgba(255,255,255,0.25);
+    color: #fff;
+}
+
+.task-buttons button:nth-child(1):hover {
+    background: rgba(255,255,255,0.35);
+}
+
+.task-buttons button:nth-child(2) { /* Delete */
+    background: #b31224;
+    color: #fff;
+}
+
+.task-buttons button:nth-child(2):hover {
+    background: #ff1e3c;
+}
